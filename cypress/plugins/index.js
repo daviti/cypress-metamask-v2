@@ -286,5 +286,9 @@ module.exports = (on, config) => {
     config.env.SKIP_METAMASK_SETUP = true;
   }
 
+  module.exports = (on, config) => {
+    require('cypress-metamask-v2/cypress/plugins')(on)
+  }
+
   return config;
 };
